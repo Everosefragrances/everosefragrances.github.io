@@ -1,135 +1,103 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Find Your Scent | Everose</title>
+<title>Everose</title>
 
 <style>
 body {
-  margin: 0;
-  font-family: "Georgia", serif;
-  background: linear-gradient(to bottom, #ffd1e6, #fff);
-  color: #7a1f46;
-  text-align: center;
+margin: 0;
+font-family: "Georgia", serif;
+background: linear-gradient(to bottom, #ffd6e8, #fff0f7);
+color: #7a1f46;
+text-align: center;
 }
 
+/* NAV BAR */
 nav {
-  background: #ff9fcb;
-  padding: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+background: #ffb6d5;
+padding: 15px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 nav a {
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-  color: #7a1f46;
-  font-size: 18px;
+margin: 0 15px;
+text-decoration: none;
+color: #7a1f46;
+font-weight: bold;
+font-size: 18px;
 }
 
-.box {
-  max-width: 800px;
-  margin: 60px auto;
-  background: #ffe4f0;
-  padding: 40px;
-  border-radius: 25px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+nav a:hover {
+text-decoration: underline;
+}
+
+/* MAIN CARD */
+.card {
+background: #ffe6f1;
+width: 70%;
+margin: 80px auto;
+padding: 60px 30px;
+border-radius: 25px;
+box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
 h1 {
-  font-size: 42px;
+font-size: 50px;
+margin-bottom: 10px;
 }
 
-.question {
-  margin: 30px 0;
-  font-size: 20px;
+.subtitle {
+font-size: 20px;
+margin-bottom: 25px;
+}
+
+.section {
+margin-top: 50px;
+padding: 30px;
+background: #ffd9ea;
+border-radius: 20px;
 }
 
 button {
-  background: #ff85b5;
-  border: none;
-  padding: 12px 20px;
-  margin: 8px;
-  border-radius: 20px;
-  font-size: 16px;
-  cursor: pointer;
-  color: #7a1f46;
+margin-top: 15px;
+padding: 12px 25px;
+border-radius: 20px;
+border: none;
+background: #ff8fbd;
+color: white;
+font-size: 16px;
+cursor: pointer;
 }
 
 button:hover {
-  background: #ff5fa2;
-}
-
-#result {
-  margin-top: 30px;
-  font-size: 24px;
-  font-weight: bold;
+background: #ff6fae;
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAV BAR -->
 <nav>
-  <a href="index.html">Home</a>
-  <a href="hints.html">Hints</a>
-  <a href="quiz.html">Find Your Scent</a>
+<a href="index.html">Home</a>
+<a href="hints.html">Hints</a>
+<a href="quiz.html">Quiz</a>
 </nav>
 
-<div class="box">
-<h1>Find Your Scent</h1>
-<p>Not every scent is worn. Some are felt.</p>
+<!-- HOME -->
+<div class="card">
+<h1>Everose</h1>
+<p class="subtitle">Where every scent tells a story.</p>
+<p>Luxury fragrances inspired by beauty, emotion, and the seasons.</p>
+<p><b>Launching soon.</b></p>
 
-<div class="question">
-<p>1. Choose a mood:</p>
-<button onclick="pick('soft')">Soft & romantic</button>
-<button onclick="pick('warm')">Warm & glowing</button>
-<button onclick="pick('fresh')">Clean & light</button>
-<button onclick="pick('deep')">Deep & cozy</button>
+<div class="section">
+<h2>Find Your Scent</h2>
+<p>Take our quiz to discover which Everose vibe fits you best.</p>
+<a href="quiz.html"><button>Start the Quiz</button></a>
 </div>
-
-<div class="question">
-<p>2. Choose a moment:</p>
-<button onclick="pick('soft')">Quiet mornings</button>
-<button onclick="pick('fresh')">Open windows</button>
-<button onclick="pick('warm')">Golden hour</button>
-<button onclick="pick('deep')">Late nights</button>
 </div>
-
-<div class="question">
-<p>3. Choose a feeling:</p>
-<button onclick="pick('fresh')">Free</button>
-<button onclick="pick('soft')">Loved</button>
-<button onclick="pick('warm')">Confident</button>
-<button onclick="pick('deep')">Comforted</button>
-</div>
-
-<div id="result"></div>
-</div>
-
-<script>
-let scores = {soft:0, warm:0, fresh:0, deep:0};
-
-function pick(type){
-  scores[type]++;
-
-  let total = scores.soft + scores.warm + scores.fresh + scores.deep;
-
-  if(total >= 5){
-    let top = Object.keys(scores).reduce((a,b)=>scores[a]>scores[b]?a:b);
-
-    let text = {
-      soft: "🌸 Your scent is soft, romantic, and delicate. Something beautiful is waiting for you.",
-      warm: "✨ Your scent is warm, glowing, and comforting. Your Everose match is coming.",
-      fresh: "🕊️ Your scent is clean, light, and airy. A new feeling is on the way.",
-      deep: "🌙 Your scent is deep, cozy, and sensual. Your Everose scent is waiting."
-    };
-
-    document.getElementById("result").innerHTML = text[top] + "<br><br>Everose — launching soon.";
-  }
-}
-</script>
 
 </body>
 </html>
