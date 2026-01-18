@@ -116,7 +116,7 @@ button:hover {
 
   <!-- ========== EDIT THIS TEXT ANYTIME ========== -->
   <p id="editableText">
-    We are so excited to release our first scents.  
+    We are so excited to release our first scents!
     Everose is a fragrance brand inspired by emotion, softness, and quiet confidence.
   </p>
 
@@ -149,57 +149,37 @@ button:hover {
   <h3>Your perfect night is:</h3>
   <button onclick="result('soft')">Soft music & candlelight</button>
   <button onclick="result('warm')">Laughing & late talks</button>
-  <button onclick="result('fresh')">Fresh air & quiet</button>
+  <button onclick="result('fresh')">freshhh</button>
   <button onclick="result('bright')">Fun, energy & glow</button>
 
   <p id="answer" style="margin-top:30px;font-weight:600;"></p>
 </div>
 
 <!-- ================= QUESTIONS ================= -->
+<!-- ================= QUESTIONS ================= -->
 <div class="section" id="questions">
   <h1>Ask Everose 💌</h1>
   <p>Leave a question or message for Everose.</p>
 
-  <!-- PUT YOUR GOOGLE FORM LINK BELOW LATER -->
-  <!--
-  <iframe src="PASTE_YOUR_FORM_LINK" width="100%" height="600" style="border:none;border-radius:20px;"></iframe>
-  -->
+  <form action="https://formspree.io/f/mbldnqwj" method="POST" style="max-width:500px;margin:30px auto;text-align:left;">
+    
+    <label>Your name (optional)</label><br>
+    <input type="text" name="name" style="width:100%;padding:12px;border-radius:12px;border:1px solid #ffc1da;margin:8px 0;"><br>
 
-  <p style="font-weight:600;">Questions opening soon.</p>
+    <label>Your email (optional)</label><br>
+    <input type="email" name="email" style="width:100%;padding:12px;border-radius:12px;border:1px solid #ffc1da;margin:8px 0;"><br>
+
+    <label>Your message</label><br>
+    <textarea name="message" required style="width:100%;padding:12px;border-radius:12px;border:1px solid #ffc1da;margin:8px 0;height:120px;"></textarea><br>
+
+    <button type="submit" style="width:100%;">Send to Everose 💗</button>
+  </form>
+
+  <p style="font-size:14px;margin-top:12px;">
+    Messages are sent privately to Everose.
+  </p>
 </div>
 
-<!-- ================= LETTERS ================= -->
-<div class="section" id="letters">
-  <h1>Everose Letters 💌</h1>
-  <p>Soft notes from Everose.</p>
-
-  <!-- ========== YOU CAN ADD MORE LETTERS HERE ========== -->
-
-  <div class="letter">
-    <div class="date">January 2026</div>
-    <p>
-      Something beautiful is being finished.
-      Not loud. Not rushed. Just right.
-    </p>
-    <div class="signature">— Everose</div>
-  </div>
-
-  <div class="letter">
-    <div class="date">January 2026</div>
-    <p>
-      We are so excited to release our first scents.
-      Scent is memory. Scent is comfort. Scent is confidence.
-    </p>
-    <div class="signature">— Everose</div>
-  </div>
-
-  <div class="letter">
-    <div class="date">Coming soon</div>
-    <p>
-      Four feelings. One story. A beginning.
-    </p>
-    <div class="signature">— Everose</div>
-  </div>
 </div>
 
 <script>
@@ -214,7 +194,7 @@ function result(type) {
   document.getElementById("answer").innerText = text;
 }
 </script>
-
+xoxo
 </body>
 </html>
 
